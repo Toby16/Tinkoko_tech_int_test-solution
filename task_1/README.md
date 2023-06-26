@@ -9,7 +9,7 @@
     "email": "lamiditemitope31@email.com" ,
     "firstName": "Temitope ",
     "phone": "7043330737",
-    "role": [buyer / seller],
+    "role": "seller",
     "userName": "temi247",
     }
 ```
@@ -24,7 +24,7 @@
     "email": "lamiditemitope31@email.com" ,
     "firstName": "Temitope ",
     "phone": "7043330737",
-    "role": [buyer / seller],
+    "role": "seller",
     "userId": "temi247",
     }
 ```
