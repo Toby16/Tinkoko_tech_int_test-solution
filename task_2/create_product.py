@@ -1,45 +1,59 @@
 #!/usr/bin/python3
 """
-will update later
+Task-2
+Author: Baasit Ayomiposi Bolaji
+
+Lambda function for creating a new product...
+and storing it in DynamoDB table.
 """
 
 import boto3
 import json
-import time
-import uuid
+import time  # to generate time when user is created
+import uuid  # to generate unique id for user
 
+
+# grant 'AmazonDynamoDBFullAccess' permission policy to the role...
+# assigned to the function to allow full access to 'DynamoDB'
 dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table("product_table")
 
+
 def lambda_handler(event, context):
     """
-    will update later
+    Lambda handler function for creating a new product.
+    * Args:
+        event (dict): The event data passed to the Lambda function.
+        context (object): The runtime information of the Lambda function.
+    * Returns:
+        dict: The response containing the status code and body.
+    * Raises:
+        KeyError: If any required field is missing in the request payload.
     """
-    
-    request_payload = event
+    request_ = event
 
     # Prepare the product data
     product_data = {
         'id': str(uuid.uuid4()),  # Generate a unique ID for the new product
-        'category': request_payload['category'],
-        'city': request_payload['city'],
-        'count': request_payload['count'],
-        'country': request_payload['country'],
+        'category': request_['category'],
+        'city': request_['city'],
+        'count': request_['count'],
+        'country': request_['country'],
         'createdAt': str(int(time.time() * 1000)),  # Timestamp in milliseconds
-        'description': request_payload['description'],
-        'images': request_payload['images'],
-        'price': request_payload['price'],
-        'productName': request_payload['productName'],
-        'quantity': request_payload['quantity'],
-        'subCategory': request_payload['subCategory'],
-        'sellerId': request_payload['sellerId'],
-        'weight': request_payload['weight']
+        'description': request_['description'],
+        'images': request_['images'],
+        'price': request_['price'],
+        'productName': request_['productName'],
+        'quantity': request_['quantity'],
+        'subCategory': request_['subCategory'],
+        'sellerId': request_['sellerId'],
+        'weight': request_['weight']
     }
 
     # Store the product data in DynamoDB
     table.put_item(Item=product_data)
 
-    # Prepare the response payload
+    # response body to be sent back to the client
     response = {
         'id': product_data["id"],
         'category': product_data['category'],
