@@ -16,7 +16,7 @@ import uuid  # to generate unique id for user
 # grant 'AmazonDynamoDBFullAccess' permission policy to the role...
 # assigned to the function to allow full access to 'DynamoDB'
 dynamodb = boto3.resource("dynamodb")
-table = dynamodb.Table("product_table")
+table = dynamodb.Table("Tinkoko_table")
 
 
 def lambda_handler(event, context):
