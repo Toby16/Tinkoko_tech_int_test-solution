@@ -33,6 +33,16 @@ class DecimalEncoder(json.JSONEncoder):
 
 
 def lambda_handler(event, context):
+    """
+    Lambda handler function for retrieving user data from dynamodb by id.
+    * Args:
+        event (dict): The event data passed to the Lambda function.
+        context (object): The runtime information of the Lambda function.
+    * Returns:
+        dict: The response containing the status code and body.
+    * Raises:
+        KeyError: If any required field is missing in the request payload.
+    """
     # Extract the user ID from the path parameters of the event
     user_id = event["pathParameters"]["id"]
     # user_id = event["id"]
