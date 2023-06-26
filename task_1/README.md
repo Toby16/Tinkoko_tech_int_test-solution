@@ -28,3 +28,7 @@
     "userId": "temi247",
     }
 ```
+
+## Solution
+* API endpoint: https://bt5jdtm5bc.execute-api.eu-north-1.amazonaws.com/user-api/create-user
+* http method: POST
