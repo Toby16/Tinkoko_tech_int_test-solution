@@ -61,8 +61,8 @@
 ```
 
 ## Solution
-* API endpoint:
+* API endpoint: https://bt5jdtm5bc.execute-api.eu-north-1.amazonaws.com/user-api/list-product
 * HTTP method: GET
 
 #### Postman api test/result
-<img src="" alt="postman test image">
+<img src="https://github.com/Toby16/Tinkoko_tech_int_test-solution/blob/main/task_4/assets/postman_test_image.png" alt="postman test image">
