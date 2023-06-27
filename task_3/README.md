@@ -57,4 +57,4 @@
 * HTTP method: GET
 
 #### Postman api test/result
-<img src="" alt=<postman test image">
+<img src="https://github.com/Toby16/Tinkoko_tech_int_test-solution/blob/main/task_3/assets/postman_test_image_2.png" alt=<postman test image">
