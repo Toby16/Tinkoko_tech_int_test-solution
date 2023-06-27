@@ -48,4 +48,13 @@
 * HTTP method: GET
 
 #### Postman api test/result
-<img src="https://github.com/Toby16/Tinkoko_tech_int_test-solution/blob/main/task_3/assets/postman_test_image.png" alt="postman test image">
+<img src="https://github.com/Toby16/Tinkoko_tech_int_test-solution/blob/main/task_3/assets/postman_test_image_1.png" alt="postman test image">
+<hr>
+
+#### /get-user_/[:user-name] (get a user record using user-name)
+* logic: <a href="https://github.com/Toby16/Tinkoko_tech_int_test-solution/blob/main/task_3/get_user_with_user-name.py">get_user_with_user-name.py</a>
+* API endpoint: https://bt5jdtm5bc.execute-api.eu-north-1.amazonaws.com/user-api/get-user_/{user-name}
+* HTTP method: GET
+
+#### Postman api test/result
+<img src="" alt=<postman test image">
