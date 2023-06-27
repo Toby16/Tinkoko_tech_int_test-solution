@@ -15,6 +15,7 @@ import json
 dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table("Tinkoko_table")
 
+
 class DecimalEncoder(json.JSONEncoder):
     """
     Custom JSON encoder class that handles Decimal objects/raw data
@@ -45,10 +46,12 @@ def lambda_handler(event, context):
     user_name = event['pathParameters']['user-name']
     # user_name = event['pathParameters']['userId']
 
-    response = table.scan(FilterExpression='userId = :name', ExpressionAttributeValues={':name': user_name})
+    response = table.scan(FilterExpression='userId = :name',
+                          ExpressionAttributeValues={':name': user_name})
     users = response.get('Items')
 
-    # edge case if no user is found in the dynamodb table with the queried user-name
+    # edge case if no user is found in the dynamodb table...
+    # with the queried user-name
     if not users:
         return {
             'statusCode': 404,
@@ -64,4 +67,3 @@ def lambda_handler(event, context):
         },
         'body': json.dumps(users, cls=DecimalEncoder)
     }
-
