@@ -42,5 +42,9 @@
 ```
 
 ## Solution
-* API endpoint:
-* HTTP method: 
+#### /get-user/[:id] (get a user record using unique id)
+* logic: <a href="https://github.com/Toby16/Tinkoko_tech_int_test-solution/blob/main/task_3/get_user_with_id.py">get_user_with_id.py</a>
+* API endpoint: https://bt5jdtm5bc.execute-api.eu-north-1.amazonaws.com/user-api/get-user/{id}
+* HTTP method: GET
+
+
