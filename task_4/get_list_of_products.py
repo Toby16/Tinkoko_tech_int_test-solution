@@ -18,7 +18,7 @@ def lambda_handler(event, context):
     # for proper error debugging
     try:
         # Get list of products from DynamoDB
-        response = table.scan(Limit=10)
+        response = table.scan(Limit=10) # as instructed by the intreviewer
         products = response['Items']
 
         # Convert Decimal objects to floats to fix "'Decimal' not found" error
