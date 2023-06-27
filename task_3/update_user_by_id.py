@@ -45,14 +45,13 @@ def lambda_handler(event, context):
             'body': json.dumps({'message': 'User not found'})
         }
 
-
     # Update user data with the request payload
     user_data.update(request_payload)
 
     # save updated data into the dynamodb database
     table.put_item(Item=user_data)
 
-    # Create the desired response body
+    # the desired response body
     response_body = {
         "id": user_data["id"],
         "activateUser": user_data["activateUser"],
