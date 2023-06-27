@@ -4,7 +4,7 @@
 ## INTERVIEW QUESTIONS
 ### Using the aws lambda function,dynamodb and api gateway develop the following Rest api endpoints:
 
-* Task 1
+## Task 1
 #### /create-user (Creating a new user)
 #### Request Payload:
 ```
@@ -34,7 +34,8 @@
     "userId": "temi247",
     }
 ```
-* Task 2
+
+## Task 2
 #### /create-product (Creating a new product)
 #### Request Payload:
 ```
@@ -83,7 +84,7 @@
     }
 ```
 
-* Task 3
+## Task 3
 #### /get-user/[:id] (get a user record using the unique id )
 
 #### /get-user/[:user-name] (get a user record using the userName attribute )
@@ -126,7 +127,7 @@
     }
 ```
 
-* Task 4
+## Task 4
 #### /list-product (get list of product; Limits=10)
 ##### Use the sellerId attached to each product to get the seller info (i.e firstName, lastName, userName and profilePic) before returning the list
 #### Response Payload:
