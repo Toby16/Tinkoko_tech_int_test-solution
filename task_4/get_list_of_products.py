@@ -1,7 +1,13 @@
 #!/usr/bin/python3
 """
+Task-4
+Author: Baasit Ayomiposi Bolaji
 
+This module contains a Lambda function...
+for retrieving list of products in a DynamoDB table...
+by sellerId
 """
+
 import boto3
 import json
 from decimal import Decimal  # used to fix "'Decimal' not found" error
